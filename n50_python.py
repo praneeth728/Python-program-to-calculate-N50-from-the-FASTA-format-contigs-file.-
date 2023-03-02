@@ -1,8 +1,14 @@
+import sys
 from Bio import SeqIO
+if len(sys.argv) != 2:
+    print(f"Usage: {sys.argv[0]} <contigs_file>")
+    sys.exit(1)
+
+# Get the file path from the command-line argument
+contigs_file = sys.argv[1]
 
 # Open the DNA sequence file
-seq_file = "C:/Users/kandu/OneDrive/Desktop/BCB/info2/hands_on_assignment3/assembly_spades/contigs.fasta"
-seq_records = SeqIO.parse(seq_file, "fasta")
+seq_records = SeqIO.parse(contigs_file, "fasta")
 
 # Initialize variables to keep track of the largest contig,its length,number of contigs,total length
 largest_contig_id = None
