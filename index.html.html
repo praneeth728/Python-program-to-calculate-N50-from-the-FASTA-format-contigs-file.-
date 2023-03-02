@@ -1,15 +1,22 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<title>How to Run the n50 Tool</title>
 </head>
 <body>
-    <h1>HOW TO USE THE TOOL</h1>
-    <p>ushdskdj</p>
-    <p>
-        ahsbdjfhsbda
-    </p>
+	<h1>Instructions</h1>
+	<p>There are two ways you can run the n50 tool:</p>
+	<ol>
+		<li>Directly run n50_python.py with contigs.fasta file</li>
+		<p>This will show the output in the terminal.</p>
+		<pre><code>python n50_python.py contigs.fasta</code></pre>
+		<li>Use n50_tool.sh</li>
+		<p>In this case, you need to set the path to your environmental path so that it can run in any directory.</p>
+		<pre><code>export PATH=$PATH:/path/to/n50_tool
+n50_tool.sh contigs.fasta</code></pre>
+	</ol>
+	<p>In the second case, you will get a file named "file_name"-n50.txt in the current working directory.</p>
+	<h2>Example Image</h2>
+	<img src="https://raw.githubusercontent.com/praneeth728/Python-program-to-calculate-N50-from-the-FASTA-format-contigs-file.-/main/image.png" alt="first Image">
 </body>
 </html>
